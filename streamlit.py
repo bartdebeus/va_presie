@@ -21,12 +21,6 @@ import seaborn as sns
 st.set_option('deprecation.showPyplotGlobalUse', False)
 
 ##########################################################################################################
-###Path toevoegen:
-##########################################################################################################
-
-path = 'C:/Users/bartd/OneDrive/Bureaublad/Data Science (Minor)/' #Zelf aanpassen!!
-
-##########################################################################################################
 ###Streamlit titel en uitleg:
 ##########################################################################################################
 
@@ -148,7 +142,7 @@ st.sidebar.write('''Deze dashboard is gemaakt door Daan Jansen en Bart de Beus, 
 ###Voorspellingsmodel:
 ##########################################################################################################
 
-linear_reg = pd.read_pickle(f'{path}linear_reg.plk')
+linear_reg = pd.read_pickle(f'linear_reg.plk')
 
 with tab2:
     st.subheader('Huizenprijs voorspellen')
