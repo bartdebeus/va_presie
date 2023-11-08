@@ -51,7 +51,7 @@ tab1, tab2, tab3 = st.tabs(["Landkaarten", "Voorspeller", 'Analyse v/d huizenpri
 
 @st.cache_data
 def data_inladen(data):
-    return pd.read_csv(f'{path}{data}.csv', sep = ';')
+    return pd.read_csv(f'{data}.csv', sep = ';')
 
 inflatie_jaar= data_inladen('inflatie_jaar')
 inflatie_maand = data_inladen('inflatie_maand')
