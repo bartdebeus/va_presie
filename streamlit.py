@@ -251,6 +251,14 @@ with tab2:
 ##########################################################################################################
 ###Plotten landkaarten:
 ##########################################################################################################
+regio_data['GemiddeldeWOZWaardeVanWoningen_98'] = regio_data['GemiddeldeWOZWaardeVanWoningen_98'].str.strip()
+
+# Replace '.' with NaN
+regio_data['GemiddeldeWOZWaardeVanWoningen_98'] = regio_data['GemiddeldeWOZWaardeVanWoningen_98'].replace('.', np.nan)
+
+# Convert the column to float and then to integers
+regio_data['GemiddeldeWOZWaardeVanWoningen_98'] = regio_data['GemiddeldeWOZWaardeVanWoningen_98'].astype(float).astype(pd.Int64Dtype())
+
 
 with tab1:
     col1, col2 = st.columns((1.3, 0.5))
