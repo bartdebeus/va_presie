@@ -260,6 +260,9 @@ regio_data['GemiddeldeWOZWaardeVanWoningen_98'] = regio_data['GemiddeldeWOZWaard
 regio_data['GemiddeldeWOZWaardeVanWoningen_98'] = regio_data['GemiddeldeWOZWaardeVanWoningen_98'].astype(float).astype(pd.Int64Dtype())
 
 
+bevolkingsstatistieken['AfstandTotBibliotheek_226'] = pd.to_numeric(bevolkingsstatistieken['AfstandTotBibliotheek_226'], errors='coerce')
+
+
 with tab1:
     col1, col2 = st.columns((1.3, 0.5))
     with col1:
